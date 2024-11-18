@@ -3,59 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASCVD Risk Calculator</title>
+    <title>ASCVD Risk Assessment Tools</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>10年ASCVD风险评估计算器</h1>
-        <form id="ascvdForm">
-            <div class="form-group">
-                <label for="gender">性别:</label>
-                <input type="radio" id="male" name="gender" value="male" required> 男
-                <input type="radio" id="female" name="gender" value="female" required> 女
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-heartbeat"></i> ASCVD风险评估工具</h1>
+            <p>提供专业的心血管疾病风险评估</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#american-pce">美国PCE计算器</a></li>
+            <li><a href="#china-par">中国China-PAR模型</a></li>
+            <li><a href="#european-score2">欧洲SCORE2计算器</a></li>
+            <li><a href="#pec-calculator">PEC计算器</a></li>
+            <li><a href="#guidelines">指南更新推荐</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- 其他工具部分保持不变 -->
+
+        <section id="pec-calculator" class="tool">
+            <h2><i class="fas fa-calculator"></i> PEC计算器</h2>
+            <p><strong>中文:</strong> PEC计算器提供了一个简化的ASCVD风险评估工具，适用于快速评估10年内发生心血管疾病的风险。</p>
+            <p><strong>English:</strong> The PEC calculator provides a simplified tool for ASCVD risk assessment, suitable for a quick estimation of the 10-year risk of cardiovascular disease.</p>
+            <p><a href="https://g.186404.xyz/ascvd-calculator/" target="_blank" class="btn">前往PEC计算器</a></p>
+        </section>
+
+        <section id="guidelines">
+            <h2><i class="fas fa-book-medical"></i> 指南更新推荐</h2>
+            <p><strong>中文:</strong> 推荐关注ACC/AHA、ESC和ADA的最新指南更新，以获取最新的风险评估和治疗建议。</p>
+            <p><strong>English:</strong> It is recommended to keep an eye on the latest updates from ACC/AHA, ESC, and ADA guidelines for the most current risk assessment and treatment recommendations.</p>
+            <div class="guidelines-links">
+                <a href="https://www.ahajournals.org/doi/10.1161/01.cir.0000437741.48606.98" target="_blank" class="btn">ACC/AHA指南</a>
+                <a href="https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/CVD-Prevention-in-clinical-practice" target="_blank" class="btn">ESC指南</a>
+                <a href="https://professional.diabetes.org/sites/professional.diabetes.org/files/media/2020_guidelines_standards_of_care.pdf" target="_blank" class="btn">ADA指南</a>
             </div>
+        </section>
+    </main>
 
-            <div class="form-group">
-                <label for="age">年龄:</label>
-                <input type="number" id="age" min="20" max="79" required>
-            </div>
-
-            <div class="form-group">
-                <label for="totalCholesterol">总胆固醇水平 (mg/dL):</label>
-                <input type="number" id="totalCholesterol" min="100" max="400" required>
-            </div>
-
-            <div class="form-group">
-                <label for="hdlCholesterol">HDL胆固醇水平 (mg/dL):</label>
-                <input type="number" id="hdlCholesterol" min="10" max="150" required>
-            </div>
-
-            <div class="form-group">
-                <label for="bloodPressure">收缩压 (mmHg):</label>
-                <input type="number" id="bloodPressure" min="90" max="200" required>
-            </div>
-
-            <div class="form-group">
-                <label for="isSmoker">是否吸烟:</label>
-                <input type="checkbox" id="isSmoker">
-            </div>
-
-            <div class="form-group">
-                <label for="hasDiabetes">是否有糖尿病:</label>
-                <input type="checkbox" id="hasDiabetes">
-            </div>
-
-            <div class="form-group">
-                <label for="hasFamilyHistory">是否有心血管疾病家族史:</label>
-                <input type="checkbox" id="hasFamilyHistory">
-            </div>
-
-            <button type="submit">计算风险</button>
-        </form>
-
-        <div id="result"></div>
-    </div>
+    <footer>
+        <p>&copy; 2023 ASCVD Risk Assessment Tools. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
