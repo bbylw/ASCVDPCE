@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCVD Risk Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>10年ASCVD风险评估计算器</h1>
+        <form id="ascvdForm">
+            <div class="form-group">
+                <label for="gender">性别:</label>
+                <input type="radio" id="male" name="gender" value="male" required> 男
+                <input type="radio" id="female" name="gender" value="female" required> 女
+            </div>
+
+            <div class="form-group">
+                <label for="age">年龄:</label>
+                <input type="number" id="age" min="20" max="79" required>
+            </div>
+
+            <div class="form-group">
+                <label for="totalCholesterol">总胆固醇水平 (mg/dL):</label>
+                <input type="number" id="totalCholesterol" min="100" max="400" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hdlCholesterol">HDL胆固醇水平 (mg/dL):</label>
+                <input type="number" id="hdlCholesterol" min="10" max="150" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bloodPressure">收缩压 (mmHg):</label>
+                <input type="number" id="bloodPressure" min="90" max="200" required>
+            </div>
+
+            <div class="form-group">
+                <label for="isSmoker">是否吸烟:</label>
+                <input type="checkbox" id="isSmoker">
+            </div>
+
+            <div class="form-group">
+                <label for="hasDiabetes">是否有糖尿病:</label>
+                <input type="checkbox" id="hasDiabetes">
+            </div>
+
+            <div class="form-group">
+                <label for="hasFamilyHistory">是否有心血管疾病家族史:</label>
+                <input type="checkbox" id="hasFamilyHistory">
+            </div>
+
+            <button type="submit">计算风险</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
